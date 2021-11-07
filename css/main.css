@@ -1,0 +1,807 @@
+@charset 'utf-8';
+@font-face {
+  font-family: "Centra";
+  src: url("../webfont/Centra-No2.woff2");
+}
+@font-face {
+  font-family: "CentraB";
+  src: url("../webfont/CentraNo2-Bold.woff2");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+img {
+  border: 0;
+  vertical-align: middle;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+html {
+  font-family: "Centra No2.woff2", "NotoSansKR-Regular.woff";
+}
+
+body {
+  font-family: "Centra No2.woff2", "NotoSansKR-Regular.woff";
+  font-size: 16px;
+}
+
+.wrap {
+  position: relative;
+  display: block;
+}
+
+.container {
+  width: 1220px;
+  margin: 0 auto;
+}
+.clearfix:after {
+  content: "";
+
+  position: relative;
+
+  display: block;
+
+  width: 100%;
+
+  clear: both;
+}
+
+/* 상단영역 */
+.header {
+  position: relative;
+  display: block;
+  z-index: 999999;
+  background-color: #fff;
+}
+.hd-mini {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  height: 40px;
+  border-bottom: 1px solid rgb(128, 127, 131);
+}
+.search {
+  width: 23.6%;
+  border-left: 1px solid rgb(128, 127, 131);
+  background: rgba(255, 255, 255, 1);
+
+  text-align: right;
+  padding-top: 12px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  font-size: 13px;
+  line-height: 1.5;
+}
+.search:hover {
+  background-color: #eeeeee;
+  color: #042ed2;
+}
+.search span {
+  cursor: pointer;
+}
+.user-menu {
+  padding-left: 0;
+  overflow: hidden;
+  width: 29.27%;
+  border-left: 1px solid rgb(128, 127, 131);
+}
+.hd-mini ul li {
+  position: relative;
+  display: inline-block;
+  padding-top: 10px;
+  margin: 0 10px 0 20px;
+}
+.hd-mini ul li a:hover {
+  color: #042ed2;
+}
+.hd-mini ul li:first-child {
+  margin-left: 50px;
+}
+.hd-mini ul li:last-child {
+  margin-right: 0 !important;
+}
+.hd-mini ul li a {
+  font-size: 13px;
+  line-height: 1.8;
+  font-weight: 400;
+}
+.compare {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url("../images/compare.png") no-repeat center;
+  background-size: contain;
+  font-size: 12px;
+  margin-right: 1.5px;
+  transform: translateY(10%);
+}
+.pocket {
+  position: relative;
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  background: url("../images/cart.png") no-repeat center;
+  background-size: contain;
+  font-size: 12px;
+  margin-right: 1.5px;
+  transform: translateY(10%);
+}
+
+.hd-mini ul li a:hover .compare {
+  background: url("../images/compare_hover.png") no-repeat center;
+  background-size: contain;
+}
+.hd-mini ul li a:hover .pocket {
+  background: url("../images/cart_hover.png") no-repeat center;
+  background-size: contain;
+}
+.hd-main {
+  position: relative;
+  padding: 1.5% 0 1.5% 0;
+  border-bottom: 1px solid rgb(128, 127, 131);
+  overflow: hidden;
+  height: 60px;
+}
+.logo {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  display: inline-block;
+  background: url("../images/logo.png") no-repeat center;
+  background-size: contain;
+  width: 90px;
+  height: 25px;
+  vertical-align: middle;
+}
+.hd-main ul {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 29.16%;
+  display: flex;
+  float: right;
+  justify-content: flex-end;
+}
+.hd-main ul li {
+  position: relative;
+  font-family: "CentraB";
+  display: inline-block;
+  margin-right: 15.3%;
+  width: auto;
+  font-size: 16px;
+  font-weight: bold;
+}
+.hd-main ul li:last-child {
+  margin-right: 0;
+}
+.hd-main ul li:hover {
+  color: #042ed2;
+}
+.menu-set {
+  font-family: "Centra", "NotoSans KR";
+  background: #282828;
+}
+.menu-set ul {
+  padding: 30px 0 10px 0;
+}
+.menu-set ul li {
+  display: block;
+  padding: 0 35px 23px 30px;
+}
+.menu-set ul li a {
+  font-size: 14px;
+  color: #fff;
+  letter-spacing: 1;
+}
+.menu-set ul li a:hover {
+  color: #1a59ff;
+}
+.menu-1 {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 270px;
+}
+.special {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.menu2-right ul {
+}
+.menu-2 {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+.menu2-left {
+  float: left;
+}
+.menu2-right {
+  float: right;
+}
+.menu2-right ul {
+  padding: 30px 0 10px 0;
+}
+.menu2-right ul li {
+  float: left;
+  padding: 0 30px 5px 0;
+}
+.menu-2 ul li {
+  font-family: "CentraB", "NotoSans KR";
+  font-weight: bold;
+  font-size: 15px;
+  color: #fff;
+}
+.menu-3 {
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 0;
+}
+.menu-down {
+  margin-top: 0;
+}
+/* 비주얼슬라이드영역 */
+.visual {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #000;
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.visual-box {
+  float: right;
+  position: relative;
+  display: block;
+  width: 72%;
+  height: 900px;
+  margin-top: 40px;
+  margin-bottom: 120px;
+}
+.visual-txt-box {
+  position: absolute;
+  display: block;
+  left: 0;
+  top: 0;
+  width: 28%;
+  height: 900px;
+  background: #fff;
+  margin-top: 140px;
+}
+.visual-txt-box > p {
+  display: inline-block;
+  font-family: "Centra", "Noto Sans KR";
+  font-size: 60px;
+  line-height: 80px;
+  color: #000;
+  width: 393px;
+  font-weight: 400;
+  letter-spacing: -3px;
+  word-wrap: initial;
+}
+.visual-txt-box em {
+  display: inline-block;
+  font-family: "CentraB", "Noto Sans KR";
+  font-size: 80px;
+  line-height: 104px;
+  font-weight: bold;
+  color: #000;
+  width: 465px;
+  margin-top: 10px;
+  font-style: normal;
+}
+.visual-box-link {
+  position: relative;
+  display: block;
+  width: 240px;
+  min-height: 100px;
+  margin-top: 60px;
+  padding-left: 120px;
+  font-family: "Centra", "Noto Sans KR";
+  font-size: 14px;
+  font-weight: bold;
+  color: #999;
+  text-align: right;
+  text-align: left;
+  line-height: 1.6;
+  transition: color 0.5s;
+}
+.visual-box-link:hover {
+  color: #000;
+}
+.visual-box-bg {
+  position: absolute;
+  top: -35%;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  background-size: cover !important;
+}
+.visual-box-bg::after {
+  content: url("../images/outlinkPlay.svg");
+  background-size: cover;
+  position: absolute;
+  left: 70px;
+}
+.box-bg1 {
+  background: url("../images/visual_box_1.png");
+}
+.box-bg2 {
+  background: url("../images/visual_box_1.png");
+}
+.box-bg3 {
+  background: url("../images/visual_box_1.png");
+}
+.box-bg4 {
+  background: url("../images/visual_box_1.png");
+}
+.box-bg5 {
+  background: url("../images/visual_box_1.png");
+}
+
+/* .visual-txt-box > a > span:last-child {
+  position: relative;
+  display: inline-block;
+  font-family: "Centra No2", "Noto Sans KR";
+  font-size: 14px;
+  font-weight: bold;
+  color: #999;
+} */
+.vbg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.bg-1 {
+  background: url("../images/bg-1.jpg") no-repeat center;
+}
+.bg-2 {
+  background: url("../images/bg-2.jpg") no-repeat center;
+}
+.bg-3 {
+  background: url("../images/bg-3.jpg") no-repeat center;
+}
+.bg-4 {
+  background: url("../images/bg-4.jpg") no-repeat center;
+}
+.bg-5 {
+  background: url("../images/bg-5.jpg") no-repeat center;
+}
+.nav-button-box {
+  position: absolute;
+  display: block;
+  bottom: 28%;
+  left: 0;
+  z-index: 99;
+}
+.sw-btn-next,
+.sw-btn-prev {
+  color: #000 !important;
+  font-size: 22px;
+  margin-left: 10px;
+  font-weight: bold;
+  transition: color 0.5s;
+}
+.sw-btn-next:hover,
+.sw-btn-prev:hover {
+  color: #042ed2 !important;
+}
+.sw-btn-next {
+  position: absolute;
+  left: 110px;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+  display: none;
+}
+/* 제품리스트영역 */
+.product {
+  position: relative;
+  display: block;
+  border-bottom: 1px solid #000;
+}
+.product .container {
+  padding-top: 85px;
+}
+.product-tit {
+  position: relative;
+  display: inline-block;
+  font-family: "Centra";
+  font-size: 34px;
+  font-weight: 500;
+  margin-bottom: 35px;
+}
+.allprod {
+  font-size: 13px;
+  float: right;
+  margin-top: 20px;
+  color: #002bd2;
+  font-weight: bold;
+  margin-bottom: 35px;
+}
+.allprod:hover {
+  text-decoration: underline;
+}
+.product-section {
+}
+.product-section ul {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.product-section ul li:first-child {
+  margin-right: 100px;
+}
+.product-section ul li:last-child {
+  margin-left: 100px;
+  margin-top: -120px;
+}
+.product-section ul li a {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.product-section ul li a:hover {
+  opacity: 0.8;
+}
+.product-section ul li p {
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  font-family: "Centra", "Noto Sans KR";
+  line-height: 31px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 80px;
+}
+.product-name {
+  display: block;
+  font-family: "CentraB", "Noto Sans KR";
+  font-size: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 30px 0 10px 0;
+  text-align: center;
+}
+/* 어린이제품영역 */
+.kids {
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+.kids-chair {
+  position: relative;
+  display: block;
+}
+.kids-chair ul {
+  display: flex;
+  justify-content: space-between;
+}
+.kids-product-name {
+  font-size: 50px;
+  font-family: "CentraB";
+  text-align: center;
+  margin: 30px 0 10px 0;
+}
+.kids-chair ul li p {
+  margin-top: 10px;
+  text-align: center;
+  font-family: "Centra";
+  font-size: 20px;
+}
+.kids-chair ul li a {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.kids-chair ul li a:hover {
+  opacity: 0.8;
+}
+.kids-chair ul li a img {
+  width: 340px;
+  height: 500px;
+}
+/* 커뮤니티영역 */
+.community {
+  background: #f5f5f5;
+  padding-top: 80px;
+  padding-bottom: 120px;
+}
+.news-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 80px;
+}
+
+.news-bar-tit {
+  padding: 0 45px 0 45px;
+  display: block;
+  background: #012bd2;
+  font-size: 18px;
+  font-family: "CentraB";
+  color: #fff;
+  text-align: center;
+  line-height: 60px;
+}
+.news-bar-cont {
+  flex-grow: 1;
+  line-height: 60px;
+  font-size: 14px;
+  background: #dde6ff;
+  color: #000;
+  font-weight: bold;
+  text-align: center;
+}
+.news-bar-cont > p {
+  display: inline-block;
+  font-family: "Centra";
+  color: #555555;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.news-bar-all {
+  text-align: center;
+  line-height: 60px;
+  background: #dde6ff;
+  color: #807f83;
+  font-size: 12px;
+  padding-right: 15px;
+  font-weight: 400;
+  text-decoration: underline;
+  float: right;
+}
+.insta-tit-box {
+  overflow: hidden;
+  display: block;
+  line-height: 55px;
+  font-family: "Centra";
+  margin-bottom: 30px;
+}
+.insta-icon {
+  float: left;
+  background: url("../images/pc_insta_profile.png") no-repeat center;
+  background-size: cover;
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.insta-tag {
+  display: block;
+  float: left;
+  font-size: 20px;
+  transform: translateY(-5%);
+}
+.sidiz-insta-list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 95px;
+}
+.sidiz-insta-list > li {
+  width: 228px;
+  height: 228px;
+  background-size: cover;
+}
+
+.sidiz-insta-list > li > a {
+  width: 100%;
+  height: 100%;
+}
+.sidiz-insta-list > li > a > img {
+  background-size: cover;
+}
+
+.insta-img1 {
+  background: url("../images/sns-img-1.jpeg") no-repeat center;
+}
+.insta-img2 {
+  background: url("../images/sns-img-2.jpeg") no-repeat center;
+}
+.insta-img3 {
+  background: url("../images/sns-img-3.jpeg") no-repeat center;
+}
+.insta-img4 {
+  background: url("../images/sns-img-4.jpeg") no-repeat center;
+}
+.insta-img5 {
+  background: url("../images/sns-img-5.jpeg") no-repeat center;
+}
+
+.chair-choice {
+  overflow: hidden;
+}
+.choice-txt-box {
+  display: block;
+  width: 50%;
+  float: left;
+}
+.choice-img-box {
+  display: block;
+  width: 50%;
+  height: 350px;
+  float: right;
+  background: red url("../images/blog-img-1.jpeg") no-repeat center;
+}
+.blog-icon {
+  display: inline-block;
+  background: url("../images/blog.png") no-repeat center;
+  width: 30px;
+  height: 30px;
+}
+.blog-icon-tit {
+  display: inline-block;
+  font-family: "Centra";
+  font-size: 18px;
+  transform: translate(5%, -50%);
+}
+.blog-tit {
+  display: block;
+  font-size: 32px;
+  font-family: "CentraB", "NotoSans KR";
+  font-weight: bold;
+  width: 300px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  line-height: 1.5;
+}
+.blog-desc {
+  display: block;
+  color: #555555;
+  font-size: 15px;
+  font-family: "Centra", "Noto Sans KR";
+  font-weight: 400;
+  width: 390px;
+  line-height: 1.7;
+  letter-spacing: 2;
+  margin-bottom: 20px;
+}
+.blog-more {
+  font-size: 13px;
+  color: #002bd2;
+  font-family: "Centra";
+  font-weight: normal;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+/* 하단영역 */
+.footer {
+  background-color: #141414;
+  padding-top: 60px;
+}
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+.sns-box {
+  display: block;
+}
+.sns-box > li {
+  float: left;
+  width: 30px;
+  height: 30px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.f-sns-f {
+  background: url("../images/facebookIcon.svg");
+}
+.f-sns-i {
+  background: url("../images/instaIcon.svg");
+}
+.f-sns-b {
+  background: url("../images/blogIcon.svg");
+}
+.footer-bottom {
+  color: #fff;
+  font-family: "Centra", "Noto Sans KR";
+  font-size: 13px;
+  padding-bottom: 120px;
+  overflow: hidden;
+}
+.fb-left {
+  width: 30%;
+  float: left;
+  line-height: 19px;
+}
+.copy {
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Centra";
+  margin-bottom: 20px;
+}
+.sidiz {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.fl-link {
+  display: block;
+  padding-top: 20px;
+  color: #fff;
+}
+.fb-right {
+  float: right;
+  width: 70%;
+}
+.fr-1 {
+  height: 55px;
+}
+.fr-1 a {
+  color: #fff;
+  font-family: "Centra", "Noto Sans KR";
+  font-size: 13px;
+  text-decoration: underline;
+  margin-right: 67px;
+}
+.fr-1 a:last-child {
+  color: #042ed2;
+}
+.fr-2 {
+  width: 100%;
+  height: 100%;
+}
+.fmn-tit {
+  display: flex;
+  justify-content: flex-start;
+}
+.fmn-list {
+  position: relative;
+  display: block;
+  margin-right: 67px;
+  font-size: 15px;
+  font-weight: bold;
+  height: 44px;
+  line-height: 22px;
+}
+.fmn-list ul {
+  display: block;
+  padding-top: 20px;
+}
+.fmn-list ul li {
+  display: block;
+  margin-bottom: 10px;
+}
+.fmn-list ul li a {
+  display: block;
+  font-family: "Centra", "NotoSans KR";
+  font-weight: 400;
+  font-size: 13px;
+  color: #fff;
+}
+.cust-num {
+  font-size: 24px;
+  font-family: "CentraB", "NotoSans KR";
+  margin-top: 20px;
+}
+.cust-center {
+  color: #fff;
+  font-size: 13px;
+}
+.lunch {
+  font-size: 12px;
+  color: #807f83;
+}
