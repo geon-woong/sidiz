@@ -24,8 +24,55 @@
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+<style>
+  /* 모달창 */
+  .black-bg {
+    z-index: 99999998;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .white-bg {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99999999;
+    background: #fff;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .modal-btn {
+    margin-top: 20px;
+    color: #fff;
+    background-color: darkgrey;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+  }
+</style>
 
 <body>
+  <div class="modal black-bg">
+  </div>
+  <div class="white-bg modal-content">
+    <p>
+      본 사이트는 학습용 목적으로 만들어 졌습니다.<br>
+      모든 저작권은 원작자에게 있습니다.
+    </p>
+    <button class="modal-btn">닫기</button>
+  </div>
   <div class="wrap">
     <!-- 상단 -->
     <header class="header">
@@ -79,22 +126,22 @@
           </ul>
         </div>
         <div class="menu2-right">
-          <ul >
+          <ul>
             <li><a href="#">SMART FINDER</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">마블</a></li>
             <li><a href="#">디즈니</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">T80</a></li>
             <li><a href="#">T50</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">atti</a></li>
             <li><a href="#">ringo cover</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">T80</a></li>
             <li><a href="#">T55</a></li>
             <li><a href="#">T50 AIR</a></li>
@@ -103,45 +150,45 @@
             <li><a href="#">T25</a></li>
             <li><a href="#">TAB PLUS</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">ringo</a></li>
             <li><a href="#">mitto</a></li>
             <li><a href="#">ible</a></li>
             <li><a href="#">T25</a></li>
             <li><a href="#">T50</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">molti</a></li>
             <li><a href="#">atti</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">RONALDO</a></li>
             <li><a href="#">VESTO</a></li>
             <li><a href="#">CELIOS</a></li>
             <li><a href="#">NUO</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">T50 side</a></li>
             <li><a href="#">T40 side</a></li>
             <li><a href="#">LOLLY</a></li>
             <li><a href="#">NOOI</a></li>
             <li><a href="#">M02</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">BUTTON</a></li>
             <li><a href="#">SPOON</a></li>
             <li><a href="#">MANE</a></li>
             <li><a href="#">EGA</a></li>
             <li><a href="#">M06</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">FUNGUS</a></li>
             <li><a href="#">PILLO</a></li>
             <li><a href="#">M17</a></li>
             <li><a href="#">M05</a></li>
             <li><a href="#">M06</a></li>
           </ul>
-          <ul >
+          <ul>
             <li><a href="#">headrest</a></li>
             <li><a href="#">hanger</a></li>
             <li><a href="#">covercushion</a></li>
@@ -489,5 +536,19 @@
   </div>
 
 </body>
+<script>
+  const btn = document.querySelector(".modal-btn");
+  var modal = document.querySelector(".modal");
+  const modal_content = document.querySelector(".modal-content");
+
+  function modal_close(params) {
+    params.addEventListener("click", function (e) {
+      modal.style.display = "none";
+      modal_content.style.display = "none";
+    })
+  }
+  modal_close(btn);
+  modal_close(modal);
+</script>
 
 </html>
